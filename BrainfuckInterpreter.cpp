@@ -14,7 +14,7 @@ static const char END_LOOP          = ']';
 
 BrainfuckInterpreter::BrainfuckInterpreter(std::string program) : program_(program) {
     dataPointer_ = instructionPointer_ = 0;
-    data_ = std::vector<char>(MIN_DATA_ARRAY_LENGHT, 0); // Initialize the data array at 0
+    data_ = std::vector<cellType>(MIN_DATA_ARRAY_LENGHT, 0); // Initialize the data array at 0
 };
 
 void BrainfuckInterpreter::run() {
@@ -36,7 +36,7 @@ bool BrainfuckInterpreter::step() {
             data_[dataPointer_]--;
             break;
         case OUTPUT:
-            std::cout << data_[dataPointer_];
+            std::cout << char(data_[dataPointer_]);
             break;
         case INPUT:
             std::cin >> data_[dataPointer_];

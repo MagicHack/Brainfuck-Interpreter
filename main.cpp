@@ -20,7 +20,6 @@ int main() {
         program += line;
     }
 
-
     BrainfuckInterpreter interpreter(program);
 
     if(!interpreter.isValidProgram()){

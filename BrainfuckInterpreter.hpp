@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+typedef int8_t cellType; // Cell type can be made larger if needed (16, 32, 64)
 
 class BrainfuckInterpreter {
 public:
@@ -19,7 +20,7 @@ public:
 private:
     size_t dataPointer_;
     size_t instructionPointer_;
-    std::vector<char> data_;
+    std::vector<cellType> data_;
     std::string program_;
 };
 
