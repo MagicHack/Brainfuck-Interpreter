@@ -3,9 +3,9 @@
 #include "BrainfuckInterpreter.hpp"
 
 int main() {
+    static const int MAX_EMPTY_LINES = 2; // Max empty lines in a pasted code
     std::string program = "";
 
-    const int MAX_EMPTY_LINES = 2;
     std::cout << "Paste your Brainfuck program here (press enter " << MAX_EMPTY_LINES << " times):\n\n";
 
     std::string line;
@@ -19,6 +19,7 @@ int main() {
 
         program += line;
     }
+
 
     BrainfuckInterpreter interpreter(program);
 
