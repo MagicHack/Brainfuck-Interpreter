@@ -1,0 +1,6 @@
+# Clion files
+.idea/*
+cmake-build-debug/*
+# Mac atrocity
+.DS_Store
+
