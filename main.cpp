@@ -19,18 +19,10 @@ int main(int argc, char* argv[]) {
         }
     }
     else{
-        static const int MAX_EMPTY_LINES = 2; // Max empty lines in a pasted code
-
-        std::cout << "Paste your Brainfuck program here (press enter " << MAX_EMPTY_LINES << " times):\n\n";
+        std::cout << "Paste your Brainfuck program here and press ctrl+d (or ctrl+z on Windows) :\n\n";
         std::string line;
-        int emptyLinesCounter = 0;
-        while(true){
-            getline(std::cin, line);
-            if(line.empty()){
-                emptyLinesCounter++;
-                if(emptyLinesCounter >= MAX_EMPTY_LINES) break;
-            } else emptyLinesCounter = 0;
 
+        while(getline(std::cin, line)){
             program += line;
         }
     }

@@ -61,7 +61,7 @@ bool BrainfuckInterpreter::step() {
                 } while(loopCounter);
             }
             break;
-        default: // Do nothing, all unknow instructions are treated as a comment
+        default: // Do nothing, all unknown instructions are treated as a comment
             break;
     }
     instructionPointer_++;
