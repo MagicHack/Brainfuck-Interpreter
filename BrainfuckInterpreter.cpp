@@ -3,8 +3,8 @@
 static const size_t MIN_DATA_ARRAY_LENGHT = 30000;
 
 // The 8 Brainfuck instructions
-static const char INCREMENT_POINTER = '<';
-static const char DECREMENT_POINTER = '>';
+static const char INCREMENT_POINTER = '>';
+static const char DECREMENT_POINTER = '<';
 static const char INCREMENT_DATA    = '+';
 static const char DECREMENT_DATA    = '-';
 static const char OUTPUT            = '.';
